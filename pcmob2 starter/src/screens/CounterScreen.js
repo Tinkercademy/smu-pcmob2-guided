@@ -3,15 +3,18 @@ import { View, Text, StyleSheet, Button } from "react-native";
 
 export default class CounterScreen extends React.component {
   state = {
-    //initialise counter here
+    counter: 0,
   };
 
   Increase = () => {
-    // configure increase button functionality
+    this.setState({
+      counter: this.state.counter + 1
+    })
   };
 
   Decrease = () => {
-    // configure decrease button functionality
+     this.setState({
+      counter: this.state.counter - 1
   };
 
   render() {
